@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #0C0F14;        /* Team21 background */
+  --color-surface: #131923;
+  --color-raised: #1A2130;
+  --color-edge: #232D3F;
+  --color-orange: #FF5714;     /* Team21 Cameroon orange */
+  --color-orange-soft: #FF7A45;
+  --color-text: #E9EDF3;
+  --color-muted: #8B96A8;
+  --font-display: "Bricolage Grotesque", system-ui, sans-serif;
+  --font-body: "Instrument Sans", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+html { background: var(--color-ink); }
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection { background: #ff571440; }
+
+* { scrollbar-width: thin; scrollbar-color: var(--color-edge) transparent; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
